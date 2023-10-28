@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { DisplayAddToCartService } from '../../Service/display-add-to-cart.service';
 import { Product } from '../../Models/product.model';
 import { ProductOrderService } from '../../Service/product-order.service';
+import { ProductDeleteService } from '../../Service/product-delete.service';
 
 @Component({
   selector: 'display-add-to-cart',
@@ -10,7 +11,10 @@ import { ProductOrderService } from '../../Service/product-order.service';
 })
 export class DisplayAddToCartComponent { 
      product :Product [] = [] ;
-    constructor(private displayAddtoCartService : DisplayAddToCartService, private productOrder: ProductOrderService)
+    constructor(
+                    private displayAddtoCartService : DisplayAddToCartService, 
+                    private productOrder: ProductOrderService,
+                    private productDelete:ProductDeleteService)
     {
          this.displayAddtoCartService.getAllProduct().subscribe(products=>(
             this.product= products
@@ -30,5 +34,20 @@ export class DisplayAddToCartComponent {
                     this.isSuccessOrder= false;
           });
                
+    }
+   
+    isSuccessDelete:Boolean=false;
+    RemoveFromCart(id:number)
+    {
+        let isSuccess= this.productDelete.productDelete(id).subscribe(p=>{
+          if(isSuccess)
+          {
+               this.displayAddtoCartService.getAllProduct().subscribe(products=>(
+                    this.product= products
+                 ));
+          }
+     else 
+          this.isSuccessDelete= false;
+        })
     }
 }

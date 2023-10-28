@@ -30,8 +30,8 @@ namespace Infrastructure.Repository
 
         public Product getProductById(int id)
         {
-            var product = _db.Products.FirstOrDefault(p => p.ProductID == id);
 
+            var product = _db.Products.FirstOrDefault(p => p.ProductID == id);
             return product;
         }
 

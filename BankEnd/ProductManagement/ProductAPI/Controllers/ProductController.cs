@@ -154,7 +154,9 @@ namespace ProductAPI.Controllers
             {
                 List<Product> products = _queryService.getcartProduct();
                 if (products == null || products.Count == 0)
-                    throw new Exception("3,Data Not Found.");
+                {
+                    return null; 
+                }
 
                 return Ok(products);
             }

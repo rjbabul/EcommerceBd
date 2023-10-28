@@ -31,7 +31,7 @@ namespace Domain.Common.Common.Service
                 var keyBytes = Encoding.UTF8.GetBytes(_configuration.GetSection("SecretKey").Value!);
                 if (keyBytes.Length < 16)
                 {
-                    throw new Exception("SecretKey length is too short. It should be at least 16 bytes.");
+                    throw new Exception("2,SecretKey length is too short. It should be at least 16 bytes.");
                 }
 
                 var key = new SymmetricSecurityKey(keyBytes);

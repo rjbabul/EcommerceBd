@@ -13,7 +13,6 @@ import { ProductRoutingModule } from './Product.routing.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatSelectModule } from '@angular/material/select';
-import { ProductAddToCartComponent } from './Component/product-add-to-cart/product-add-to-cart.component';
 import { ProductAddToCartService } from './Service/product-add-to-cart.service';
 import { DisplayAddToCartComponent } from './Component/display-add-to-cart/display-add-to-cart.component';
 import { DisplayAddToCartService } from './Service/display-add-to-cart.service';
@@ -26,7 +25,6 @@ import { ProductOrderService } from './Service/product-order.service';
     ProductCreateComponent,
     ProductEditComponent,
     ProductDeleteComponent,
-    ProductAddToCartComponent,
     DisplayAddToCartComponent,
     ProductOrderComponent
   ],

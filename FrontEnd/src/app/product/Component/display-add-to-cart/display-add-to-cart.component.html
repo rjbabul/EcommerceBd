@@ -23,7 +23,14 @@
        <td>{{product.productPrice}}</td>
        <td>{{product.productDescription}}</td> 
         
-       <td><a     routerLink="#"><img src="assets/images/remove-from-cart.png"height="40" width="40" style="margin:10px;" ></a></td>
+       <td>
+       <div *ngIf="product.productID">
+            <form (ngSubmit)="RemoveFromCart(product.productID)">
+                <button type="submit"><a ><img src="assets/images/remove-from-cart.png"height="40" width="40" style="margin:10px;" ></a>
+                </button>
+            </form>
+       </div>
+       </td>
 </tr>
 </tbody>
 </table>
@@ -31,7 +38,6 @@
 <span style="text-color:green;">Successfully Ordered. Thank you for Ordering . Please wait for order Confirmation.</span>
 </div>
 <form (ngSubmit)="order()">
-     
     <button  type="submit" class="btn"  style="margin-right: 80%; border:none;"><img src="assets/images/order.png"height="50" width="180" > </button>
 </form>
 
