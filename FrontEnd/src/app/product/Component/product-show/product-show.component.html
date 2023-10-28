@@ -1,0 +1,30 @@
+
+
+
+
+<div class="row" > 
+    <div class="card col-3" style="width: 18rem;padding: 20px;"*ngFor="let product of product; let i=index" style="margin:10px;">
+        <img class="card-img-top" src="{{product.productImage}}" alt="Card image cap">
+        <div class="card-body">
+        <b class="card-title">{{product.productName}}</b>
+          
+        </div>
+         
+        
+        <p class="list-group-item"><b>Price:</b> {{product.productPrice}} $</p> 
+          
+        <div>
+          <label style="font-weight: bold; margin-bottom:5px;"><u>Description:</u></label>
+           <p class="card-text">{{product.productDescription}}</p>
+        </div>
+       
+        <div class="card-body" style="height:70px;">
+          <button type="submit" class=" btn btn-secondary" style="margin-left:40%;" routerLink="/product-add-to-cart/{{product.productID}}">  Add to Cart<i class="fa fa-shopping-cart"></i> </button>
+         
+        </div>
+      </div>
+    
+  </div>
+
+  
+  

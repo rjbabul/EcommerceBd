@@ -1,0 +1,12 @@
+P:\AngularProject\CRUD_withAngular_And_ASP.Net_API\BankEnd\ProductManagement\Domain\bin\Release\net7.0\Domain.deps.json
+P:\AngularProject\CRUD_withAngular_And_ASP.Net_API\BankEnd\ProductManagement\Domain\bin\Release\net7.0\Domain.dll
+P:\AngularProject\CRUD_withAngular_And_ASP.Net_API\BankEnd\ProductManagement\Domain\bin\Release\net7.0\Domain.pdb
+P:\AngularProject\CRUD_withAngular_And_ASP.Net_API\BankEnd\ProductManagement\Domain\obj\Release\net7.0\Domain.csproj.AssemblyReference.cache
+P:\AngularProject\CRUD_withAngular_And_ASP.Net_API\BankEnd\ProductManagement\Domain\obj\Release\net7.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+P:\AngularProject\CRUD_withAngular_And_ASP.Net_API\BankEnd\ProductManagement\Domain\obj\Release\net7.0\Domain.AssemblyInfoInputs.cache
+P:\AngularProject\CRUD_withAngular_And_ASP.Net_API\BankEnd\ProductManagement\Domain\obj\Release\net7.0\Domain.AssemblyInfo.cs
+P:\AngularProject\CRUD_withAngular_And_ASP.Net_API\BankEnd\ProductManagement\Domain\obj\Release\net7.0\Domain.csproj.CoreCompileInputs.cache
+P:\AngularProject\CRUD_withAngular_And_ASP.Net_API\BankEnd\ProductManagement\Domain\obj\Release\net7.0\Domain.dll
+P:\AngularProject\CRUD_withAngular_And_ASP.Net_API\BankEnd\ProductManagement\Domain\obj\Release\net7.0\refint\Domain.dll
+P:\AngularProject\CRUD_withAngular_And_ASP.Net_API\BankEnd\ProductManagement\Domain\obj\Release\net7.0\Domain.pdb
+P:\AngularProject\CRUD_withAngular_And_ASP.Net_API\BankEnd\ProductManagement\Domain\obj\Release\net7.0\ref\Domain.dll

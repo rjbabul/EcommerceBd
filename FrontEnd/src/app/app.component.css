@@ -1,0 +1,7 @@
+.nav-item :hover{
+    background-color: rgb(102, 102, 236);
+}
+
+.component{
+    padding: 20px;
+}

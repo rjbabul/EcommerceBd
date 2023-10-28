@@ -1,0 +1,38 @@
+<p>product-show works!</p>
+<table class="table table-striped">
+<thead>
+    <tr >
+       
+        <th>Product Image</th>
+        <th>Product Name</th>
+        <th>Product Unit Price</th>
+        <th>Quantity</th>
+        <th>Grant Price</th>
+        <th>Product Description</th>
+        
+        <th  style="text-align: center;">Action</th>
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let product of product; let i=index" >
+          
+       <td><img src="{{product.productImage}}" height="80" width="80" ></td>        
+       <td>{{product.productName}}</td> 
+       <td>{{product.productPrice}}</td> 
+       <td>1</td>
+       <td>{{product.productPrice}}</td>
+       <td>{{product.productDescription}}</td> 
+        
+       <td><a     routerLink="#"><img src="assets/images/remove-from-cart.png"height="40" width="40" style="margin:10px;" ></a></td>
+</tr>
+</tbody>
+</table>
+<div *ngIf="isSuccessOrder">
+<span style="text-color:green;">Successfully Ordered. Thank you for Ordering . Please wait for order Confirmation.</span>
+</div>
+<form (ngSubmit)="order()">
+     
+    <button  type="submit" class="btn"  style="margin-right: 80%; border:none;"><img src="assets/images/order.png"height="50" width="180" > </button>
+</form>
+
+ 
