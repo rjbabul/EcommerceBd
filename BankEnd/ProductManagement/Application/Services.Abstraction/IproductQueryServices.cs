@@ -11,7 +11,7 @@ namespace Application.Services.Abstraction
     {
         Product getProductById(int id);
         List<Product> getAllProducts();
-        List<Product> getcartProduct();
+        List<Product> getcartProduct(List<CartModel> carts);
         
     }
 }

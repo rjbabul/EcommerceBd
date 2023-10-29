@@ -146,13 +146,13 @@ namespace ProductAPI.Controllers
         }
 
         [Authorize]
-        [HttpGet("get-cart-roducts")]
-        public ActionResult<List<Product>> GetCartProducts()
+        [HttpPost("get-cart-roducts")]
+        public ActionResult<List<Product>> GetCartProducts(List<CartModel> carts)
        {
 
             try
             {
-                List<Product> products = _queryService.getcartProduct();
+                List<Product> products = _queryService.getcartProduct(carts);
                 if (products == null || products.Count == 0)
                 {
                     return null; 

@@ -1,4 +1,4 @@
-<p>product-show works!</p>
+
 <table class="table table-striped">
 <thead>
     <tr >
@@ -6,7 +6,7 @@
         <th>Product Image</th>
         <th>Product Name</th>
         <th>Product Unit Price</th>
-        <th>Quantity</th>
+        <th colspan="3">Quantity</th>
         <th>Grant Price</th>
         <th>Product Description</th>
         
@@ -14,28 +14,45 @@
     </tr>
 </thead>
 <tbody>
-    <tr *ngFor="let product of product; let i=index" >
+    <tr *ngFor="let product of cartItems; let i=index" >
           
        <td><img src="{{product.productImage}}" height="80" width="80" ></td>        
        <td>{{product.productName}}</td> 
        <td>{{product.productPrice}}</td> 
-       <td>1</td>
-       <td>{{product.productPrice}}</td>
+       <td colspan="3">
+            <div class="row">
+                <div *ngIf="product.productID  " class="col-4">
+                    <form (ngSubmit)="DecreaseQuantity(product.productID)">
+                        <button *ngIf="product.productQuantity" style="border: none;  color:green; font-size:18px;font-weight: bold;">-</button>
+                    </form>
+                </div>
+                <div class="col-3" style="text-align: center;">
+                    {{product.productQuantity}}
+                </div>
+                <div *ngIf="product.productID" class="col-4">
+                    <form (ngSubmit)="IncreaseQuantity(product.productID)">
+                        <button style="border: none;  color:green; font-size:16px;font-weight: bold; ">+</button>
+                    </form>
+                </div>
+            </div>
+        </td>
+
+       <td>{{product.grandproductPrice}}</td>
        <td>{{product.productDescription}}</td> 
         
        <td>
-       <div *ngIf="product.productID">
-            <form (ngSubmit)="RemoveFromCart(product.productID)">
-                <button type="submit"><a ><img src="assets/images/remove-from-cart.png"height="40" width="40" style="margin:10px;" ></a>
-                </button>
-            </form>
-       </div>
+        <div *ngIf="product.productID">
+                <form (ngSubmit)="RemoveFromCart(product.productID)">
+                    <button type="submit" style="border: none;"><a ><img src="assets/images/remove-from-cart.png"height="40" width="40" style="margin:10px;" ></a>
+                    </button>
+                </form>
+        </div>
        </td>
 </tr>
 </tbody>
 </table>
 <div *ngIf="isSuccessOrder">
-<span style="text-color:green;">Successfully Ordered. Thank you for Ordering . Please wait for order Confirmation.</span>
+<span style=" text-color :green;">Successfully Ordered. Thank you for Ordering . Please wait for order Confirmation.</span>
 </div>
 <form (ngSubmit)="order()">
     <button  type="submit" class="btn"  style="margin-right: 80%; border:none;"><img src="assets/images/order.png"height="50" width="180" > </button>

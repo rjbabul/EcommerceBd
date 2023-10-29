@@ -29,9 +29,9 @@ export class ProductShowComponent {
   }
 
   AddtoCard(id:number){
-            console.log(id);
+            
             var isSucess = this.addtoCart.ProductAddtoCart(id).subscribe(pa=>{
-              
+             
          });
   }
 }

@@ -47,13 +47,12 @@ namespace Application.Services
         }
 
          
-        public List<Product> getcartProduct()
+        public List<Product> getcartProduct(List<CartModel>carts)
         {
-            List<CartModel> carts = _quaryRepository.getCartList();
             List<Product> products = new List<Product>();
             foreach(var car in carts)
             {
-                var aProduct = _quaryRepository.getProductById((int)car.ProductId);
+                var aProduct = _quaryRepository.getProductById((int)car.Id);
                 if(aProduct!=null)
                 {
                     products.Add(aProduct);
